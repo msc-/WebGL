@@ -305,27 +305,25 @@
   <ipstatus>No known IP claims.</ipstatus>
 
   <newtypes>
-    <p>XXX Need to get the XSL fixed for interfaces ...</p>
-
-    <typedef>
-      <type>double <name>WDTNanoTime</name></type>
+    <typedef name="WDTNanoTime">
+      <type>double</type>
 
       <p>This type is used for nanosecond time stamps and time periods.</p>
     </typedef>
 
-    <typedef>
-      <type>interface <name>WDTStreamFrameInfo </name>{ double frameTime;
-      WDTNanoTime presentTime } </type>
+    <interface name="WDTStreamFrameInfo">
+      <member>double frameTime;</member>
+      <member>WDTNanoTime presentTime</member>
 
       <p>This type is used to provide information about the latched frame.</p>
-    </typedef>
+    </interface>
 
-    <typedef>
-      <type>interface <name>WDTStream </name>{ ... }</type>
+    <interface name="WDTStream">
+      <member>...</member>
 
       <p>This type is used to manage the image stream between the producer and
       consumer.</p>
-    </typedef>
+    </interface>
   </newtypes>
 
   <additions>

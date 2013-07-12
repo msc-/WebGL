@@ -176,16 +176,16 @@
     image is successfully latched, <code>false</code> otherwise.</dd><dt class="idl-code">void WDTStream.releaseImage()</dt><dd>Releases the latched
     image. Subsequent samping of the <code>WebGLTexture</code>, that was bound
     to the <code>TEXTURE_EXTERNAL_OES</code> target of the active texture unit
-    when the WDTStream was created, will return opaque black.</dd></dl><h2 class="no-toc">New Types</h2><p>XXX Need to get the XSL fixed for interfaces ...</p><dl class="methods"><dt class="idl-code">typedef double <em>WDTNanoTime</em></dt><dd>
+    when the WDTStream was created, will return opaque black.</dd></dl><h2 class="no-toc">New Types</h2><dl class="methods"><dt class="idl-code">typedef double <em>WDTNanoTime</em>;</dt><dd>
       
 
       <p>This type is used for nanosecond time stamps and time periods.</p>
-    </dd><dt class="idl-code">typedef interface <em>WDTStreamFrameInfo </em>{ double frameTime;
-      WDTNanoTime presentTime } </dt><dd>
+    </dd><dt class="idl-code">interface <em>WDTStreamFrameInfo</em> {<br/>  double frameTime;<br/>  WDTNanoTime presentTime<br/>};</dt><dd>
+      
       
 
       <p>This type is used to provide information about the latched frame.</p>
-    </dd><dt class="idl-code">typedef interface <em>WDTStream </em>{ ... }</dt><dd>
+    </dd><dt class="idl-code">interface <em>WDTStream</em> {<br/>  ...<br/>};</dt><dd>
       
 
       <p>This type is used to manage the image stream between the producer and

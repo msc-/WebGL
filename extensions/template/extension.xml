@@ -136,26 +136,23 @@ interface OES_foo_bar {
 
   <!-- new types -->
   <newtypes>
-    <p>These typedef signatures should include &lt;name&gt; markup because
-    C's type syntax is baroquen.</p>
-    <typedef>
-      <type>unsigned long long <name>in_pipe</name></type>
+    <typedef name="in_pipe">
+      <type>unsigned long long</type>
       XHTML
     </typedef>
-    <typedef>
-      <type>unsigned long long <name>out_pipe</name></type>
+    <typedef name="out_pipe">
+      <type>unsigned long long</type>
       XHTML
     </typedef>
-    <typedef>
-      <type>struct plumber { struct plumber (*work)(in_pipe,
-      out_pipe); } <name>plumber_t</name></type>
+    <interface name="Plumber">
+      <member>Plumber work(in_pipe,out_pipe);</member>
+      <p>After attempting a connection, the plumber is no longer the same.</p>
+    </interface>
+    <interface name="Agency">
+      <member>void register(Plumber);</member>
+      <member>Plumber find();</member>
       XHTML
-    </typedef>
-    <typedef>
-      <type>plumber_t (*<name>agency</name>)(uint32_t yp_sz,
-      plumber_t*)</type>
-      XHTML
-    </typedef>
+    </interface>
   </newtypes>
 
   <!-- new tokens -->
